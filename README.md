@@ -10,10 +10,10 @@ SwiftUIIntegratedSheet is a Swift Package that provides an easy way to present s
 
 ## Requirements
 
-- **iOS**: Version 14.0 or later
-- **macOS**: Version 11.0 or later
-- **Xcode**: Version 12.0 or later
-- **Swift**: Version 5.3 or later
+- **iOS**: Version 18.0 or later
+- **macOS**: Version 14.0 or later
+- **Xcode**: Version 16.0 or later
+- **Swift**: Version 5.5 or later
 
 ## Installation
 
@@ -21,7 +21,7 @@ SwiftUIIntegratedSheet is a Swift Package that provides an easy way to present s
 
 1. Open your project in Xcode.
 2. Navigate to **File > Swift Packages > Add Package Dependency**.
-3. Enter the repository URL: `https://github.com/username/SwiftUIIntegratedSheet.git`
+3. Enter the repository URL: `https://github.com/mcrich23/SwiftUIIntegratedSheet.git`
 4. Select the version you want to install.
 5. Click **Finish** to add the package to your project.
 
@@ -115,14 +115,6 @@ struct ContentView: View {
 - **header**: An optional header view, provided using a closure.
 - **content**: The main content of the sheet, provided using a closure.
 
-## Example Project
-
-An example project demonstrating the usage of `SwiftUIIntegratedSheet` and `SheetContainer` is included in the repository. Feel free to explore and modify it to better understand how the package works.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Let me know if you'd like to adjust the documentation further or add more details about the `SheetContainer` configuration!
