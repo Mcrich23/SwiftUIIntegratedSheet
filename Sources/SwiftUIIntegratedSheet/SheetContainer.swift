@@ -21,7 +21,7 @@ public struct SheetContainer<Header: View, Content: View>: View {
         self.content = content
     }
      
-    public init(title: String, isShown: Binding<Bool>, sheetScrollOffset: Binding<CGFloat>? = nil, @ViewBuilder content: @escaping () -> Content) where Header == EmptyView {
+    public init(title: String, isShown: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) where Header == EmptyView {
         self.title = title
         self._isShown = isShown
         self.header = nil
