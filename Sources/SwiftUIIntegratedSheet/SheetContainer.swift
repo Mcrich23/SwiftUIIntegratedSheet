@@ -7,6 +7,41 @@
 
 import SwiftUI
 
+
+/// A customizable container view for presenting content in a sheet format.
+///
+/// `SheetContainer` provides a structured way to display content in a sheet with an optional header
+/// and customizable appearance. It uses a flexible SwiftUI interface to handle the visibility and content of the sheet.
+///
+/// - Parameters:
+///     - title: The title displayed at the top of the sheet.
+///     - isShown: Controls the visibility of the sheet.
+///     - header: An optional custom header view.
+///     - content: The main content of the sheet, provided as a view builder closure.
+///
+/// ## Example Usage
+/// ```swift
+/// @State private var isSheetShown = false
+///
+/// var body: some View {
+///     SheetContainer(
+///         title: "Custom Sheet",
+///         isShown: $isSheetShown,
+///         header: {
+///             HStack {
+///                 Text("Custom Header")
+///                     .font(.headline)
+///                 Spacer()
+///             }
+///             .padding()
+///         }
+///     ) {
+///         Text("Content goes here.")
+///             .padding()
+///     }         
+/// }
+/// ```
+///
 public struct SheetContainer<Header: View, Content: View>: View {
     let title: String
     @Binding var isShown: Bool

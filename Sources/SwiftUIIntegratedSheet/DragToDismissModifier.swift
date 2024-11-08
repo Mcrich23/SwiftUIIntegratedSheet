@@ -8,6 +8,13 @@
 import Foundation
 import SwiftUI
 
+/// A view modifier that adds drag-to-dismiss functionality to a sheet or modal view.
+///
+/// `DragToDismissModifier` allows users to dismiss a presented view by dragging
+/// it downward. This modifier provides an intuitive and interactive way to
+/// close sheets, making the user experience feel more natural and responsive.
+///
+///  - Important: This modifier has been added to the View protocol as ``dragToDismiss(isPresented:offsetY:)``
 struct DragToDismissModifier: ViewModifier {
     @Binding var isPresented: Bool
     @Binding var offsetY: CGFloat
@@ -50,6 +57,15 @@ struct DragToDismissModifier: ViewModifier {
 }
 
 extension View {
+    /// A view modifier that adds drag-to-dismiss functionality to a sheet or modal view.
+    ///
+    /// `.dragToDismiss` allows users to dismiss a presented view by dragging
+    /// it downward. This modifier provides an intuitive and interactive way to
+    /// close sheets, making the user experience feel more natural and responsive.
+    ///
+    /// - Parameters:
+    ///     - isPresented: A binding boolean that determines whether the sheet is visible.
+    ///     - offsetY: A binding representation of the y offset
     func dragToDismiss(isPresented: Binding<Bool>, offsetY: Binding<CGFloat>) -> some View {
         self.modifier(DragToDismissModifier(isPresented: isPresented, offsetY: offsetY))
     }
